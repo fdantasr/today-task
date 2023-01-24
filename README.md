@@ -1,5 +1,5 @@
 
-## Today's Task is an open source and White-label web application that helps teams be more productive.
+## Today's Task is an open source and White-label web app that provides a simple and fast space to better communicate with your clients on freelance projects.
 
 ### Features I'm working on:
 - Login
