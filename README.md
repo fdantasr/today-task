@@ -1,8 +1,10 @@
-# today-task
-Today's Task is an open source web application that helps teams be more productive.
 
-# Features I'm working on:
+## Today's Task is an open source and White-label web application that helps teams be more productive.
+
+### Features I'm working on:
 - Login
-- Discussions/Feedback Feed
 - Personal profile
-
+- Discussions/Feedback Feed
+- kanban board
+- Space for exchanging direct messages.
+- Fully whitelabel space
