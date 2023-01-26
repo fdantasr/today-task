@@ -1,3 +1,8 @@
+<p align="center">
+<img width="300" src="https://user-images.githubusercontent.com/62207970/214764965-e82e27c6-b5ac-48f8-bbd0-b0d67e4bd655.svg">
+</p>
+
+---
 
 #  Today's Task
 
