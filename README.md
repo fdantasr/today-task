@@ -4,11 +4,12 @@
 
 ---
 
-#  Today's Task
+###  Start task-related discussions using topics and tags.
 
 [Today's Task](https://github.com/fdantasr/today-task) is an open source and White-label web app that provides a simple and fast space to better communicate with your clients on freelance projects.
 
 ### Features I'm working on:
+
 
 - [x] Login - Authentication and Authorization. 
 - [x] Personal profile
