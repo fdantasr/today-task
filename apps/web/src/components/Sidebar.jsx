@@ -2,6 +2,9 @@ import styles from '../components/Sidebar.module.css'
 import { PencilLine } from "phosphor-react";
 import Cargo from '../assets/Group 85.svg'
 
+
+import { Avatar } from './Avatar';
+
 export function Sidebar(props) {
     return (
         <aside className={styles.sidebar}>
@@ -10,7 +13,7 @@ export function Sidebar(props) {
              4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=50" />
 
             <div className={styles.profile}>
-                <img className={styles.avatar} src="https://github.com/fdantasr.png" />
+              <Avatar src="https://github.com/fdantasr.png"/> 
                 <strong>Felipe Dantas</strong>
                 <span>Software Developer</span>
                 <div className={styles.cargo}>
