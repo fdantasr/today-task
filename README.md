@@ -18,7 +18,7 @@
 - [x] Space for exchanging direct messages
 - [x] Fully whitelabel space
  
- ![Supabase Dashboard](https://user-images.githubusercontent.com/62207970/215193661-d75d12c2-aa79-4ca2-9545-5f1f0a85622f.png)
+ ![](https://user-images.githubusercontent.com/62207970/215248163-e5c8bcf1-bb2d-4f02-ac92-c18db50016bd.png)
  
  ### Architecture:
  
