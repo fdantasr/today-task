@@ -1,13 +1,22 @@
 .wrapper {
-    max-width: 70rem;
+    max-width: 82rem;
     margin: 2rem auto;
     padding: 0 1rem;
   
     display: grid;
-    grid-template-columns: 256px 1fr; /*Grid template colums - Largura*/
-    gap: 2rem;
+    grid-template-columns: 16rem /*Sidebar*/ 40rem /*1fr*/22rem;
+    gap: 1.5rem;
+    justify-content: center;
     align-items: flex-start;
   
   }
+  @media (max-width: 768px){
+    html {
+      font-size: 87.5%;
+    }
+    .wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
   
-  
+  /*ARRUMAR O MAX WITH*/

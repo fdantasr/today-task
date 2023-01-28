@@ -21,12 +21,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 body {
   background-color: var(--gray-900);
   color: var(--gray-300);
   -webkit-font-smoothing: antialiased;
+}
+::selection{
+  background-color: var(--green-500);
+  color: var(--white);
 }
 
 body, input, textarea, button {
