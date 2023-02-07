@@ -18,7 +18,7 @@
 - [x] Space for exchanging direct messages
 - [x] Fully whitelabel space
  
- ![](https://user-images.githubusercontent.com/62207970/215248393-69fad03b-b4d5-4827-9110-5c19a041ee24.png)
+ ![](https://user-images.githubusercontent.com/62207970/217142575-9036139e-4cd0-4d11-8121-a195dc81796a.png)
  
  ### Architecture:
  
