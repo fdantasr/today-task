@@ -1,40 +1,65 @@
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+import { useState } from 'react';
 
-import styles from './Post.module.css';
 import { Comment } from './Comment'
 import { Avatar } from './Avatar';
 
-export function Post(props) {
+import styles from './Post.module.css';
+
+
+export function Post({ author, publishedAt, content }) {
+    const [comments, setComments]  = useState([
+        1,2,
+    ])
+
+    const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
+        locale: ptBR
+    })
+    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+        locale: ptBR,
+        addSuffix: true
+    });
+
+    function handleCreateNewComment() {
+        event.preventDefault();
+        setComments([...comments, comments.length +1]);
+       // setNewComment('');
+      }
+
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <Avatar src="https://github.com/benawad.png" />
+                    <Avatar src={author.avatarUrl} />
                     <div className={styles.authorInfo}>
-                        <strong>Ben Awad</strong>
-                        <span>Software Consultant</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
 
-                <time title='24 de janeiro às 15 horas' dateTime='2023-01-24 15:24:00 '>Pubicado há 1 hora </time>
+                <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>
+                    {publishedDateRelativeToNow}
+                </time>
             </header>
             <div className={styles.content}>
-                <p>Hey people 👋</p>
-
-                <p> I want to make a video seeing how fast I can spend +$100K on AWS/GCP/Azure. I want to make a video seeing
-                    how fast I can spend +$100K on AWS/GCP/Azure 🚀</p>
-                <p>👉 <a href="#"> jane.design/doctorcare</a></p>
-                <p>
-                    <a href="#">#newvideo</a>{' '}
-                    <a href="#">#project</a> {' '}
-                    <a href="#">#dev</a>
-                </p>
+            {
+                content.map(line => {
+                    if (line.type === 'paragraph') {
+                        return <p>{line.content}</p>
+                    } else{
+                        line.type === 'link'
+                        return <p><a href='#'>{line.content}</a></p>
+                    }
+                })
+            }
             </div>
-            <form className={styles.commentForm}>
+            <form onSubmit={ handleCreateNewComment } className={styles.commentForm}>
                 <strong>Leave your feedback</strong>
 
                 <textarea
-                 placeholder='Leave a comment' 
-                 />
+                    placeholder='Leave a comment'
+                />
 
                 <footer>
                     <button type='submit'>Publish</button>
@@ -42,11 +67,13 @@ export function Post(props) {
             </form>
 
             <div className={styles.commentList}>
-           <Comment/>
-           <Comment/>
-           <Comment/>
+               {
+                comments.map(comment =>{
+                    return <Comment />
+                })
+               }
             </div>
-           
+
         </article>
     )
 }
