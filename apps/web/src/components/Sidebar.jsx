@@ -31,7 +31,7 @@ export function Sidebar(props) {
             <footer>
                 <a href="#">
                     <PencilLine size={20} />
-                    Editar seu perfil</a>
+                    Edit your profile</a>
             </footer>
         </aside>
     )

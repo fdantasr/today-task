@@ -9,7 +9,7 @@ export function Header(props) {
             <img src={logoTeste} alt="Ignite Logo" />
             <div className={styles.searchIcon}>
                 <span><MagnifyingGlass weight="bold" /></span>
-                <input type="text" className={styles.search} placeholder=" Procure por tópicos, pessoas ou tarefas" />
+                <input type="text" className={styles.search} placeholder=" Search for topics, users or categories" />
             </div>
             <img className={styles.avatar} src="https://github.com/fdantasr.png" />
         </header>

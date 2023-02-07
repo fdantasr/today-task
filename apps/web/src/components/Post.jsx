@@ -18,7 +18,7 @@ export function Post({ author, publishedAt, content }) {
     })
     const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
         locale: ptBR,
-        addSuffix: true
+        addSuffix: true,  
     });
 
     function handleCreateNewComment() {
